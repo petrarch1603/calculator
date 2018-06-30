@@ -15,14 +15,31 @@ buttons.forEach(button => {
   }
 });
 
+let display = {
+  number: "",
+  operator: null,
+  update: function(){
+    document.getElementById('number-display').textContent = this.number;
+    document.getElementById('op-display').textContent = this.operator != null ? this.operator: "";
+  },
+  clear: function(){
+    this.number = 0;
+    this.operator = null;
+  },
+
+}
+
 function onClickNumber(e) {
   let num = e.target.textContent;
-  console.log(num);
+  display.number = display.number + num;
+  display.update();
 }
 
 function onClickOperator(e) {
   let oper = e.target.textContent;
-  console.log(oper);
+  display.operator = oper;
+  display.number = '';
+  display.update();
 }
 
 function onClickEquals(e) {
