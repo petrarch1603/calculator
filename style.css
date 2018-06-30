@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(top, red, white);
+  background-repeat: no-repeat;
+}
+
+#calc-contain{
+  width:350px;
+  margin:auto;
+  position: relative;
+  top:200px;
+  border:8px solid green;
+  border-radius: 8px;
+}
+
+#display{
+  border: 1px solid black;
+  font-size: 15pt;
+  padding: 5px 10px 5px 10px;
+  border:0;
+}
+
+#button-container {
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+}
+
+button {
+  font-size:15pt;
+  background-color: aquamarine;
+  transition-duration: 2.5s;
+  border: 1px solid red;
+}
+
+button:hover {
+  background-color: blanchedalmond;
+}
