@@ -88,11 +88,13 @@ let calculator = {
       case '/':
         if (b === 0) {
           result = 'ERROR - Cannot Divide by Zero!'
+          console.log(result);
+        } else {
+          result = a / b;
         }
-        result = a / b;
         break;
     }
-    if (result = 'ERROR - Cannot Divide by Zero!') {
+    if (result === 'ERROR - Cannot Divide by Zero!') {
       this.operator_stack = [];
     }
     this.operand_stack.push(result);
