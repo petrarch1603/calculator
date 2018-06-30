@@ -14,3 +14,25 @@ buttons.forEach(button => {
     button.addEventListener('click', onClickDecimal);
   }
 });
+
+function onClickNumber(e) {
+  let num = e.target.textContent;
+  console.log(num);
+}
+
+function onClickOperator(e) {
+  let oper = e.target.textContent;
+  console.log(oper);
+}
+
+function onClickEquals(e) {
+  console.log('equal pushed');
+}
+
+function onClickClear(e) {
+  console.log('clear pushed');
+}
+
+function onClickDecimal(e) {
+  console.log('. pushed');
+}
